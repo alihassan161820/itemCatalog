@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% include "navbar.html" %}
+{% block content %}
+<!-- Page Content -->
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <h1 class="item_title">{{item.name}}</h1>
+                <p class="item_des">
+                    <strong>Description :</strong> {{item.description}}
+                </p>
+                <div class="editOrDel">
+                    <a href="{{ url_for('editItem',item_id = item.id)}}">Edit</a> |
+                    <a href="{{ url_for('deleteItem',item_id = item.id)}}">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "content.html" %}
+{% block items %}
+<h1 class="cat-title">{{category.name}} Items ({{items.count()}} items) </h1>
+{% for i in items %}
+<ul>
+    <a href="{{ url_for('showItemDescription',catalog_name = category.name,item_name=i.name)}}">{{i.name}}</a>
+</ul>
+{% endfor %}
+{% endblock %}

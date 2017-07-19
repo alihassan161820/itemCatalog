@@ -1,0 +1,20 @@
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            Categories
+        </li>
+        {% for c in categories %}
+        <ul>
+            <li>
+                <a href="{{ url_for('showItems',catalog_name = c.name)}}">{{c.name}}</a>
+            </li>
+        </ul>
+        {% endfor %}
+
+
+
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->
+

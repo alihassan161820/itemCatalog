@@ -1,0 +1,11 @@
+{% extends "content.html" %}
+{% block items %}
+<h1 class="title">Latest Items</h1>
+    <ul ><a class="add" href="{{ url_for('addItems')}}">Add Item</a></ul>
+    {% for i in items %}
+    <ul>
+        <a href="{{ url_for('showItemDescription',catalog_name = i.category.name,item_name=i.name)}}">{{i.name}}</a> <span>({{i.category.name}})</span>
+    </ul>
+    {% endfor %}
+
+{% endblock %}

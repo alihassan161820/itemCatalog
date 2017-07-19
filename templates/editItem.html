@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% include "navbar.html" %}
+{% block content %}
+<!-- Page Content -->
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1>Edit Item</h1>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" name="title" value="{{item.name}}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Desciption</label>
+                        <input type="text" class="form-control" name="description" value="{{item.description}}" required>
+                    </div>
+                    <label>Category</label>
+                    <select class="form-control" name="cat-select">
+                        {% for c in categories %}
+                        <option value="{{c.name}}">{{c.name}}</option>
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

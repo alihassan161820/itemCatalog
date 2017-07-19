@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% include "navbar.html" %}
+{% block content %}
+<!-- Page Content -->
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1>Delete Item</h1>
+                <form method="POST">
+                    <div class="form-group">
+                        <label>Are you sure you want to delete ?</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
